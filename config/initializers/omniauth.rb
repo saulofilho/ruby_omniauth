@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :developer unless Rails.env.production?
-  provider :google_oauth2, '615862826044-cfu23g5e0u7o44040t8td3b7fpq7moat.apps.googleusercontent.com', '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'
+  provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET']
+  provider :facebook, ENV['FEACEBOOK_APP_ID'], ENV['FEACEBOOK_APP_SECRET'],
+  client_options: {
+    site: 'https://graph.facebook.com/v10.0',
+    authorize_url: "https://www.facebook.com/v10.0/dialog/oauth"
+  }
 end

@@ -79,6 +79,10 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     faraday (1.8.0)
       faraday-em_http (~> 1.0)
@@ -138,6 +142,8 @@ GEM
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
       rack-protection
+    omniauth-facebook (9.0.0)
+      omniauth-oauth2 (~> 1.2)
     omniauth-google-oauth2 (1.0.0)
       jwt (>= 2.0)
       oauth2 (~> 1.1)
@@ -255,9 +261,11 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   omniauth
+  omniauth-facebook
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   puma (~> 5.0)

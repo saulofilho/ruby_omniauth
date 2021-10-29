@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'omniauth_callbacks#index'
 
   get '/auth/google_oauth2/callback', to: 'omniauth_callbacks#google_oauth2'
+  get '/auth/facebook/callback', to: 'omniauth_callbacks#facebook'
 end
